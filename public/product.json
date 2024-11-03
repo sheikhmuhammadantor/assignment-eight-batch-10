@@ -2,9 +2,9 @@
   "platform": "GadgetHaven",
   "products": [
     {
-      "product_id": 1,
+      "product_id": "P001",
       "product_title": "iPhone 14 Pro",
-      "product_image": "https://example.com/images/iphone14pro.jpg",
+      "product_image": "https://i.ibb.co.com/L9ZXR4M/P001.jpg",
       "category": "Mobile Phones",
       "price": 1199.99,
       "description": "The latest iPhone with A16 Bionic chip, triple camera system, and 6.1-inch Super Retina XDR display.",
@@ -18,9 +18,9 @@
       "rating": 4.8
     },
     {
-      "product_id": 2,
+      "product_id": "P002",
       "product_title": "Samsung Galaxy S23",
-      "product_image": "https://example.com/images/galaxys23.jpg",
+      "product_image": "https://i.ibb.co.com/84zcwND/P002.png",
       "category": "Mobile Phones",
       "price": 999.99,
       "description": "Android smartphone with Snapdragon 8 Gen 2 processor, triple camera system, and 120Hz display.",
@@ -34,25 +34,24 @@
       "rating": 4.6
     },
     {
-      "product_id": 3,
-      "product_title": "Google Pixel 7 Pro",
-      "product_image": "https://example.com/images/pixel7pro.jpg",
-      "category": "Mobile Phones",
-      "price": 899.99,
-      "description": "Google's flagship smartphone with Tensor G2 chip, amazing camera features, and adaptive battery.",
+      "product_id": "P003",
+      "product_title": "Sony WH-1000XM5",
+      "product_image": "https://i.ibb.co.com/hZP2XkM/P003.webp",
+      "category": "Headsets",
+      "price": 349.99,
+      "description": "Wireless noise-canceling headphones with up to 30 hours of battery life and superior sound quality.",
       "specifications": [
-        { "Display": "6.7-inch QHD+ OLED" },
-        { "Processor": "Google Tensor G2" },
-        { "Storage": "128GB, 256GB, 512GB" },
-        { "Camera": "50MP main, 12MP ultra-wide, 48MP telephoto" }
+        { "Type": "Over-ear" },
+        { "Noise Cancellation": "Active Noise Cancelling" },
+        { "Battery Life": "Up to 30 hours" }
       ],
       "availability": true,
-      "rating": 4.7
+      "rating": 4.8
     },
     {
-      "product_id": 4,
+      "product_id": "P004",
       "product_title": "OnePlus 11",
-      "product_image": "https://example.com/images/oneplus11.jpg",
+      "product_image": "https://i.ibb.co.com/B3dpVgB/P004.jpg",
       "category": "Mobile Phones",
       "price": 749.99,
       "description": "High-performance Android phone with Snapdragon 8 Gen 2 and Hasselblad-enhanced camera.",
@@ -66,182 +65,9 @@
       "rating": 4.5
     },
     {
-      "product_id": 5,
-      "product_title": "Sony Xperia 1 IV",
-      "product_image": "https://example.com/images/xperia1iv.jpg",
-      "category": "Mobile Phones",
-      "price": 1049.99,
-      "description": "Sony's 4K smartphone with advanced camera tech and real-time eye autofocus.",
-      "specifications": [
-        { "Display": "6.5-inch 4K HDR OLED" },
-        { "Processor": "Snapdragon 8 Gen 1" },
-        { "Storage": "256GB" },
-        { "Camera": "12MP triple-lens system with eye tracking" }
-      ],
-      "availability": true,
-      "rating": 4.4
-    },
-    {
-      "product_id": 6,
-      "product_title": "Xiaomi 12T Pro",
-      "product_image": "https://example.com/images/xiaomi12tpro.jpg",
-      "category": "Mobile Phones",
-      "price": 649.99,
-      "description": "Xiaomi's flagship with 200MP camera, Snapdragon 8+ Gen 1, and fast charging.",
-      "specifications": [
-        { "Display": "6.67-inch AMOLED" },
-        { "Processor": "Snapdragon 8+ Gen 1" },
-        { "Storage": "128GB, 256GB" },
-        { "Camera": "200MP main, 8MP ultra-wide, 2MP macro" }
-      ],
-      "availability": true,
-      "rating": 4.6
-    },
-    {
-      "product_id": 7,
-      "product_title": "Realme GT 2 Pro",
-      "product_image": "https://example.com/images/realmegt2pro.jpg",
-      "category": "Mobile Phones",
-      "price": 549.99,
-      "description": "Flagship-level performance with Snapdragon 8 Gen 1 and 150° ultra-wide camera.",
-      "specifications": [
-        { "Display": "6.7-inch AMOLED 2K" },
-        { "Processor": "Snapdragon 8 Gen 1" },
-        { "Storage": "128GB, 256GB" },
-        { "Camera": "50MP main, 50MP ultra-wide" }
-      ],
-      "availability": true,
-      "rating": 4.3
-    },
-    {
-      "product_id": 8,
-      "product_title": "Asus ROG Phone 6",
-      "product_image": "https://example.com/images/rogphone6.jpg",
-      "category": "Mobile Phones",
-      "price": 799.99,
-      "description": "Gaming-focused phone with Snapdragon 8+ Gen 1, 165Hz display, and air triggers.",
-      "specifications": [
-        { "Display": "6.78-inch AMOLED 165Hz" },
-        { "Processor": "Snapdragon 8+ Gen 1" },
-        { "Storage": "128GB, 256GB" },
-        { "Camera": "50MP main, 13MP ultra-wide" }
-      ],
-      "availability": false,
-      "rating": 4.6
-    },
-    {
-      "product_id": 9,
-      "product_title": "Nokia X50",
-      "product_image": "https://example.com/images/nokiax50.jpg",
-      "category": "Mobile Phones",
-      "price": 599.99,
-      "description": "Reliable Nokia smartphone with high-res display and advanced camera technology.",
-      "specifications": [
-        { "Display": "6.67-inch PureDisplay" },
-        { "Processor": "Snapdragon 775" },
-        { "Storage": "128GB" },
-        { "Camera": "108MP main, 8MP ultra-wide" }
-      ],
-      "availability": true,
-      "rating": 4.2
-    },
-    {
-      "product_id": 10,
-      "product_title": "MacBook Pro 16-inch",
-      "product_image": "https://example.com/images/macbookpro16.jpg",
-      "category": "Laptops",
-      "price": 2799.99,
-      "description": "Apple's powerful laptop with M2 Max chip, 32GB RAM, and a stunning Liquid Retina XDR display.",
-      "specifications": [
-        { "Display": "16-inch Liquid Retina XDR" },
-        { "Processor": "M2 Max" },
-        { "RAM": "32GB" },
-        { "Storage": "512GB, 1TB, 2TB" }
-      ],
-      "availability": true,
-      "rating": 4.9
-    },
-    {
-      "product_id": 11,
-      "product_title": "Sony WH-1000XM5",
-      "product_image": "https://example.com/images/sonywh1000xm5.jpg",
-      "category": "Headsets",
-      "price": 349.99,
-      "description": "Wireless noise-canceling headphones with up to 30 hours of battery life and superior sound quality.",
-      "specifications": [
-        { "Type": "Over-ear" },
-        { "Noise Cancellation": "Active Noise Cancelling" },
-        { "Battery Life": "Up to 30 hours" }
-      ],
-      "availability": true,
-      "rating": 4.8
-    },
-    {
-      "product_id": 12,
-      "product_title": "Microsoft Surface Pro 8",
-      "product_image": "https://example.com/images/surfacepro8.jpg",
-      "category": "Tablets",
-      "price": 899.99,
-      "description": "A versatile 2-in-1 tablet with a detachable keyboard, featuring an Intel Core processor and high-resolution touchscreen.",
-      "specifications": [
-        { "Display": "13-inch PixelSense" },
-        { "Processor": "Intel Core i5/i7" },
-        { "RAM": "8GB/16GB" },
-        { "Storage": "128GB/256GB/512GB/1TB SSD" }
-      ],
-      "availability": true,
-      "rating": 4.7
-    },
-    {
-      "product_id": 13,
-      "product_title": "JBL Flip 6",
-      "product_image": "https://example.com/images/jblflip6.jpg",
-      "category": "Speakers",
-      "price": 119.99,
-      "description": "Portable Bluetooth speaker with rich bass, waterproof design, and 12 hours of battery life.",
-      "specifications": [
-        { "Bluetooth": "5.1" },
-        { "Battery Life": "12 hours" },
-        { "Water Resistance": "IPX7" }
-      ],
-      "availability": true,
-      "rating": 4.6
-    },
-    {
-      "product_id": 14,
-      "product_title": "iPad Pro 12.9-inch",
-      "product_image": "https://example.com/images/ipadpro12.jpg",
-      "category": "Tablets",
-      "price": 1099.99,
-      "description": "Apple's high-performance tablet with M1 chip and advanced display for creative and professional use.",
-      "specifications": [
-        { "Display": "12.9-inch Liquid Retina XDR" },
-        { "Processor": "M1" },
-        { "Storage": "128GB, 256GB, 512GB, 1TB, 2TB" }
-      ],
-      "availability": true,
-      "rating": 4.9
-    },
-    {
-      "product_id": 15,
-      "product_title": "Dell XPS 15",
-      "product_image": "https://example.com/images/dellxps15.jpg",
-      "category": "Laptops",
-      "price": 1899.99,
-      "description": "Premium laptop with 15.6-inch 4K UHD+ display, Intel Core i7, and NVIDIA GTX 1650 Ti.",
-      "specifications": [
-        { "Display": "15.6-inch 4K UHD+" },
-        { "Processor": "Intel Core i7" },
-        { "RAM": "16GB" },
-        { "Storage": "512GB SSD" }
-      ],
-      "availability": true,
-      "rating": 4.8
-    },
-    {
-      "product_id": 16,
+      "product_id": "P005",
       "product_title": "HP Spectre x360",
-      "product_image": "https://example.com/images/hpspectrex360.jpg",
+      "product_image": "https://i.ibb.co.com/d623mZP/P005.jpg",
       "category": "Laptops",
       "price": 1599.99,
       "description": "Convertible laptop with 13.3-inch OLED display, Intel Evo certified, and all-day battery life.",
@@ -255,69 +81,25 @@
       "rating": 4.7
     },
     {
-      "product_id": 17,
-      "product_title": "Sony WH-CH710N",
-      "product_image": "https://example.com/images/sonywhch710n.jpg",
-      "category": "Headsets",
-      "price": 149.99,
-      "description": "Affordable noise-canceling headphones with wireless Bluetooth technology and 35 hours of battery life.",
+      "product_id": "P006",
+      "product_title": "Xiaomi 12T Pro",
+      "product_image": "https://i.ibb.co.com/YkY50m4/P006.png",
+      "category": "Mobile Phones",
+      "price": 649.99,
+      "description": "Xiaomi's flagship with 200MP camera, Snapdragon 8+ Gen 1, and fast charging.",
       "specifications": [
-        { "Type": "Over-ear" },
-        { "Noise Cancellation": "Active Noise Cancelling" },
-        { "Battery Life": "Up to 35 hours" }
-      ],
-      "availability": true,
-      "rating": 4.4
-    },
-    {
-      "product_id": 18,
-      "product_title": "Beats Solo3 Wireless",
-      "product_image": "https://example.com/images/beatssolo3.jpg",
-      "category": "Headsets",
-      "price": 199.99,
-      "description": "Stylish wireless headphones with up to 40 hours of battery life and Apple W1 chip for seamless connectivity.",
-      "specifications": [
-        { "Type": "On-ear" },
-        { "Battery Life": "Up to 40 hours" },
-        { "Connectivity": "Bluetooth" }
-      ],
-      "availability": true,
-      "rating": 4.3
-    },
-    {
-      "product_id": 19,
-      "product_title": "Bose SoundLink Revolve",
-      "product_image": "https://example.com/images/bosesoundlinkrevolve.jpg",
-      "category": "Speakers",
-      "price": 199.99,
-      "description": "Portable Bluetooth speaker with 360° sound and deep bass, perfect for both indoor and outdoor use.",
-      "specifications": [
-        { "Bluetooth": "Yes" },
-        { "Battery Life": "Up to 12 hours" },
-        { "Water Resistance": "IPX4" }
+        { "Display": "6.67-inch AMOLED" },
+        { "Processor": "Snapdragon 8+ Gen 1" },
+        { "Storage": "128GB, 256GB" },
+        { "Camera": "200MP main, 8MP ultra-wide, 2MP macro" }
       ],
       "availability": true,
       "rating": 4.6
     },
     {
-      "product_id": 20,
-      "product_title": "Ultimate Ears Boom 3",
-      "product_image": "https://example.com/images/ueboom3.jpg",
-      "category": "Speakers",
-      "price": 149.99,
-      "description": "Waterproof portable speaker with loud 360° sound, deep bass, and a tough build for outdoor adventures.",
-      "specifications": [
-        { "Bluetooth": "Yes" },
-        { "Battery Life": "Up to 15 hours" },
-        { "Water Resistance": "IP67" }
-      ],
-      "availability": true,
-      "rating": 4.5
-    },
-    {
-      "product_id": 21,
+      "product_id": "P007",
       "product_title": "Google Nest Audio",
-      "product_image": "https://example.com/images/nestaudio.jpg",
+      "product_image": "https://i.ibb.co.com/sC729rw/P007.jpg",
       "category": "Speakers",
       "price": 99.99,
       "description": "Smart speaker with Google Assistant and high-quality audio to fill the room with rich sound.",
@@ -330,9 +112,212 @@
       "rating": 4.7
     },
     {
-      "product_id": 22,
+      "product_id": "P008",
+      "product_title": "Asus ROG Phone 6",
+      "product_image": "https://i.ibb.co.com/x8R2Rrp/P008.png",
+      "category": "Mobile Phones",
+      "price": 799.99,
+      "description": "Gaming-focused phone with Snapdragon 8+ Gen 1, 165Hz display, and air triggers.",
+      "specifications": [
+        { "Display": "6.78-inch AMOLED 165Hz" },
+        { "Processor": "Snapdragon 8+ Gen 1" },
+        { "Storage": "128GB, 256GB" },
+        { "Camera": "50MP main, 13MP ultra-wide" }
+      ],
+      "availability": false,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P009",
+      "product_title": "Nokia X50",
+      "product_image": "https://i.ibb.co.com/TmpvXd0/P009.webp",
+      "category": "Mobile Phones",
+      "price": 599.99,
+      "description": "Reliable Nokia smartphone with high-res display and advanced camera technology.",
+      "specifications": [
+        { "Display": "6.67-inch PureDisplay" },
+        { "Processor": "Snapdragon 775" },
+        { "Storage": "128GB" },
+        { "Camera": "108MP main, 8MP ultra-wide" }
+      ],
+      "availability": true,
+      "rating": 4.2
+    },
+    {
+      "product_id": "P010",
+      "product_title": "MacBook Pro 16-inch",
+      "product_image": "https://i.ibb.co.com/0Dbxwkt/P010.jpg",
+      "category": "Laptops",
+      "price": 2799.99,
+      "description": "Apple's powerful laptop with M2 Max chip, 32GB RAM, and a stunning Liquid Retina XDR display.",
+      "specifications": [
+        { "Display": "16-inch Liquid Retina XDR" },
+        { "Processor": "M2 Max" },
+        { "RAM": "32GB" },
+        { "Storage": "512GB, 1TB, 2TB" }
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "P011",
+      "product_title": "Google Pixel 7 Pro",
+      "product_image": "https://i.ibb.co.com/nz0XmbQ/P011.jpg",
+      "category": "Mobile Phones",
+      "price": 899.99,
+      "description": "Google's flagship smartphone with Tensor G2 chip, amazing camera features, and adaptive battery.",
+      "specifications": [
+        { "Display": "6.7-inch QHD+ OLED" },
+        { "Processor": "Google Tensor G2" },
+        { "Storage": "128GB, 256GB, 512GB" },
+        { "Camera": "50MP main, 12MP ultra-wide, 48MP telephoto" }
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "P012",
+      "product_title": "Microsoft Surface Pro 8",
+      "product_image": "https://i.ibb.co.com/KLgXJM3/P012.jpg",
+      "category": "Tablets",
+      "price": 899.99,
+      "description": "A versatile 2-in-1 tablet with a detachable keyboard, featuring an Intel Core processor and high-resolution touchscreen.",
+      "specifications": [
+        { "Display": "13-inch PixelSense" },
+        { "Processor": "Intel Core i5/i7" },
+        { "RAM": "8GB/16GB" },
+        { "Storage": "128GB/256GB/512GB/1TB SSD" }
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "P013",
+      "product_title": "JBL Flip 6",
+      "product_image": "https://i.ibb.co.com/jZ5CXYm/P013.webpv",
+      "category": "Speakers",
+      "price": 119.99,
+      "description": "Portable Bluetooth speaker with rich bass, waterproof design, and 12 hours of battery life.",
+      "specifications": [
+        { "Bluetooth": "5.1" },
+        { "Battery Life": "12 hours" },
+        { "Water Resistance": "IPX7" }
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P014",
+      "product_title": "iPad Pro 12.9-inch",
+      "product_image": "https://i.ibb.co.com/JmFJwn2/P014.jpg",
+      "category": "Tablets",
+      "price": 1099.99,
+      "description": "Apple's high-performance tablet with M1 chip and advanced display for creative and professional use.",
+      "specifications": [
+        { "Display": "12.9-inch Liquid Retina XDR" },
+        { "Processor": "M1" },
+        { "Storage": "128GB, 256GB, 512GB, 1TB, 2TB" }
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "P015",
+      "product_title": "Dell XPS 15",
+      "product_image": "https://i.ibb.co.com/6XZX87S/P015.webp",
+      "category": "Laptops",
+      "price": 1899.99,
+      "description": "Premium laptop with 15.6-inch 4K UHD+ display, Intel Core i7, and NVIDIA GTX 1650 Ti.",
+      "specifications": [
+        { "Display": "15.6-inch 4K UHD+" },
+        { "Processor": "Intel Core i7" },
+        { "RAM": "16GB" },
+        { "Storage": "512GB SSD" }
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "P0016",
+      "product_title": "Sony Xperia 1 IV",
+      "product_image": "https://i.ibb.co.com/BVXWJNL/P016.webp",
+      "category": "Mobile Phones",
+      "price": 1049.99,
+      "description": "Sony's 4K smartphone with advanced camera tech and real-time eye autofocus.",
+      "specifications": [
+        { "Display": "6.5-inch 4K HDR OLED" },
+        { "Processor": "Snapdragon 8 Gen 1" },
+        { "Storage": "256GB" },
+        { "Camera": "12MP triple-lens system with eye tracking" }
+      ],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": "P017",
+      "product_title": "Sony WH-CH710N",
+      "product_image": "https://i.ibb.co.com/YybcNYc/P017.png",
+      "category": "Headsets",
+      "price": 149.99,
+      "description": "Affordable noise-canceling headphones with wireless Bluetooth technology and 35 hours of battery life.",
+      "specifications": [
+        { "Type": "Over-ear" },
+        { "Noise Cancellation": "Active Noise Cancelling" },
+        { "Battery Life": "Up to 35 hours" }
+      ],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": "P018",
+      "product_title": "Bose SoundLink Revolve",
+      "product_image": "https://i.ibb.co.com/RC37rdL/P018.png",
+      "category": "Speakers",
+      "price": 199.99,
+      "description": "Portable Bluetooth speaker with 360° sound and deep bass, perfect for both indoor and outdoor use.",
+      "specifications": [
+        { "Bluetooth": "Yes" },
+        { "Battery Life": "Up to 12 hours" },
+        { "Water Resistance": "IPX4" }
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P019",
+      "product_title": "Beats Solo3 Wireless",
+      "product_image": "https://i.ibb.co.com/nCMmZBN/P019.jpg",
+      "category": "Headsets",
+      "price": 199.99,
+      "description": "Stylish wireless headphones with up to 40 hours of battery life and Apple W1 chip for seamless connectivity.",
+      "specifications": [
+        { "Type": "On-ear" },
+        { "Battery Life": "Up to 40 hours" },
+        { "Connectivity": "Bluetooth" }
+      ],
+      "availability": true,
+      "rating": 4.3
+    },
+
+    {
+      "product_id": "P020",
+      "product_title": "Ultimate Ears Boom 3",
+      "product_image": "https://i.ibb.co.com/2qyWY1z/P020.jpg",
+      "category": "Speakers",
+      "price": 149.99,
+      "description": "Waterproof portable speaker with loud 360° sound, deep bass, and a tough build for outdoor adventures.",
+      "specifications": [
+        { "Bluetooth": "Yes" },
+        { "Battery Life": "Up to 15 hours" },
+        { "Water Resistance": "IP67" }
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "P021",
       "product_title": "Samsung Galaxy Tab S8",
-      "product_image": "https://example.com/images/galaxytabs8.jpg",
+      "product_image": "https://i.ibb.co.com/Rh2qjQj/P021.webp",
       "category": "Tablets",
       "price": 849.99,
       "description": "Android tablet with powerful Snapdragon 8 Gen 1 chip, S Pen support, and immersive display.",
@@ -343,6 +328,22 @@
       ],
       "availability": true,
       "rating": 4.6
+    },
+    {
+      "product_id": "P022",
+      "product_title": "Realme GT 2 Pro",
+      "product_image": "https://i.ibb.co.com/gydDfc3/P022.jpg",
+      "category": "Mobile Phones",
+      "price": 549.99,
+      "description": "Flagship-level performance with Snapdragon 8 Gen 1 and 150° ultra-wide camera.",
+      "specifications": [
+        { "Display": "6.7-inch AMOLED 2K" },
+        { "Processor": "Snapdragon 8 Gen 1" },
+        { "Storage": "128GB, 256GB" },
+        { "Camera": "50MP main, 50MP ultra-wide" }
+      ],
+      "availability": true,
+      "rating": 4.3
     }
   ]
 }
