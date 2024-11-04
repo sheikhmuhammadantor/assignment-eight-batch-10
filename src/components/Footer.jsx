@@ -3,7 +3,7 @@ import Heading from "./Heading"
 function Footer() {
     return (
         <>
-        <Heading heading="Gadget Heaven" paragraph="Leading the way in cutting-edge technology and innovation."></Heading>
+            <Heading bool={false} heading="Gadget Heaven" paragraph="Leading the way in cutting-edge technology and innovation."></Heading>
             <footer className="footer text-gray-500 font-medium p-10 px-32 justify-items-center my-10 mb-20 border-t">
                 <nav>
                     <h6 className="text-black text-xl font-semibold mx-auto">Services</h6>
