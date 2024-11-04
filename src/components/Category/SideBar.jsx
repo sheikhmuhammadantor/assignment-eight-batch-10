@@ -5,7 +5,7 @@ function SideBar() {
 
     const [categories, setCategories] = useState([]);
     useEffect(() => {
-        fetch(`/category.json`)
+        fetch('/category.json')
             .then(res => res.json())
             .then(data => setCategories(data))
     }, []);
