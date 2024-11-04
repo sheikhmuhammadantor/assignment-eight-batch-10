@@ -11,8 +11,9 @@ function NavBar() {
         setLinks(
             <>
                 <NavLink to="/" className={({ isActive }) => `${basicStyle} ${isActive ? "border-b-2" : " "}`}>Home</NavLink>
-                <NavLink to="/statistics" className={({ isActive }) => `${basicStyle} ${isActive ? "border-b-2" : " "}`}>Statistics</NavLink>
+                <NavLink to="/products" className={({ isActive }) => `${basicStyle} ${isActive ? "border-b-2" : " "}`}>Products</NavLink>
                 <NavLink to="/dashboard" className={({ isActive }) => `${basicStyle} ${isActive ? "border-b-2" : " "}`}>Dashboard</NavLink>
+                <NavLink to="/statistics" className={({ isActive }) => `${basicStyle} ${isActive ? "border-b-2" : " "}`}>Statistics</NavLink>
             </>
         )
     }, [basicStyle]);
@@ -28,7 +29,7 @@ function NavBar() {
                         {links}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost text-2xl font-bold text-white">Gadget Heaven</Link>
+                <Link to="/" className="btn btn-ghost text-2xl font-bold text-white break-words">Gadget Heaven</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-5">

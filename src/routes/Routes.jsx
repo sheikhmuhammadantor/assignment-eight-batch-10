@@ -4,6 +4,8 @@ import MainLayout from "../layouts/MainLayout";
 import Statistics from "../pages/Statistics";
 import Dashboard from "../pages/Dashboard";
 import ErrorPage from "../pages/ErrorPage";
+import AllProduct from "../pages/AllProduct";
+import ProductDetails from "../components/Products/ProductDetails";
 
 
 const routes = createBrowserRouter([
@@ -17,17 +19,26 @@ const routes = createBrowserRouter([
                 element: <Home></Home>,
                 children: [
                     {
-                        
+                        path: '/',
+
                     }
                 ]
+            },
+            {
+                path: '/products',
+                element: <AllProduct></AllProduct>,
+            },
+            {
+                path: '/dashboard',
+                element: <Dashboard></Dashboard>,
             },
             {
                 path: '/statistics',
                 element: <Statistics></Statistics>,
             },
             {
-                path: '/dashboard',
-                element: <Dashboard></Dashboard>,
+                path: '/products/:productId',
+                element: <ProductDetails></ProductDetails>
             },
         ]
     },
