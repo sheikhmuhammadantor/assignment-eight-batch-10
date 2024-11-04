@@ -2,9 +2,9 @@ import Heading from "./Heading"
 
 function Footer() {
     return (
-        <>
+        <section className="py-24">
             <Heading bool={false} heading="Gadget Heaven" paragraph="Leading the way in cutting-edge technology and innovation."></Heading>
-            <footer className="footer text-gray-500 font-medium p-10 px-32 justify-items-center my-10 mb-20 border-t">
+            <footer className="footer text-gray-500 font-medium p-10 px-32 justify-items-center my-10 border-t">
                 <nav>
                     <h6 className="text-black text-xl font-semibold mx-auto">Services</h6>
                     <a className="link link-hover mx-auto">Branding</a>
@@ -26,7 +26,7 @@ function Footer() {
                     <a className="link link-hover mx-auto">Cookie policy</a>
                 </nav>
             </footer>
-        </>
+        </section>
     )
 }
 

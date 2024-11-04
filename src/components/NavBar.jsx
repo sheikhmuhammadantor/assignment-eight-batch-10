@@ -24,7 +24,7 @@ function NavBar() {
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white">
                         <FaBarsStaggered></FaBarsStaggered>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-40 p-5 shadow gap-2 border-2">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-40 p-5 shadow gap-2 border-2 bg-main-color">
                         {links}
                     </ul>
                 </div>
