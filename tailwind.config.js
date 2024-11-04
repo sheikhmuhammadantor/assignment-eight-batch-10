@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'main-color': '#9538e2',
+      },
       fontFamily: {
         'sora': ["Sora", 'sans-serif'],
       },
