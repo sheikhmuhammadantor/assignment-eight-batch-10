@@ -5,6 +5,9 @@ import Statistics from "../pages/Statistics";
 import Dashboard from "../pages/Dashboard";
 import ErrorPage from "../pages/ErrorPage";
 import AllProduct from "../pages/AllProduct";
+// import FilterProduct from "../components/Products/FilterProduct";
+import ProductDetails from "../pages/ProductDetails";
+import Products from "../components/Products/Products";
 import FilterProduct from "../components/Products/FilterProduct";
 
 
@@ -20,12 +23,12 @@ const routes = createBrowserRouter([
                 children: [
                     {
                         path: "/",
-                        
+                        element: <Products></Products>
                     },
                     {
-                        path: '/:productId',
+                        path: "/:categoryName",
                         element: <FilterProduct></FilterProduct>
-                    }
+                    },
                 ]
             },
             {
@@ -40,6 +43,10 @@ const routes = createBrowserRouter([
                 path: '/statistics',
                 element: <Statistics></Statistics>,
             },
+            {
+                path: '/details/:id',
+                element: <ProductDetails></ProductDetails>
+            }
 
         ]
     },

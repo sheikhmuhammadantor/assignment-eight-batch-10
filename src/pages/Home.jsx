@@ -1,11 +1,11 @@
 import Hero from "../components/Hero"
-import Products from "../components/Products/ProductBody"
+import ProductBody from "../components/Products/ProductBody"
 
 function Home() {
   return (
     <section>
         <Hero></Hero>
-        <Products></Products>
+        <ProductBody></ProductBody>
     </section>
   )
 }

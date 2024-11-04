@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 
-function Category({ name }) {
+function Category({ category }) {
 
   const basicStyle = `btn text-base text-black rounded-full`
+  const { category_name: name } = category;
 
   return (
     <NavLink to={`/${name}`} className={({ isActive }) => `${basicStyle} ${isActive ? "text-white bg-main-color" : " "}`}>{name}</NavLink>
@@ -11,7 +12,7 @@ function Category({ name }) {
 }
 
 Category.propTypes = {
-  name: PropTypes.string,
+  category: PropTypes.object,
 }
 
 export default Category

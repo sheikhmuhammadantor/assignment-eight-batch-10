@@ -3,18 +3,18 @@ import Category from "./Category";
 
 function SideBar() {
 
-    const [category, setCategory] = useState([]);
+    const [categories, setCategories] = useState([]);
     useEffect(() => {
         fetch(`/category.json`)
-        .then(res => res.json())
-        .then(data => setCategory(data))
+            .then(res => res.json())
+            .then(data => setCategories(data))
     }, []);
-    
 
     return (
         <div className="flex flex-col gap-3 border p-4 rounded-2xl shadow-xl">
             {
-                category.map((cat) => <Category key={cat.category_id} name={cat.category_name}></Category>)
+                categories.map((category, idx) => <Category key={idx} category={category}></Category>)
+                // category.map((cat) => <NavLink to={`/${cat.category_name}`} className={({ isActive }) => `${basicStyle} ${isActive ? "text-white bg-main-color" : " "}`} key={cat.category_name}>{cat.category_name}</NavLink>)
             }
         </div>
     )
