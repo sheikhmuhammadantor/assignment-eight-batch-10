@@ -1,5 +1,5 @@
 import Hero from "../components/Hero"
-import Products from "../components/Products/Products"
+import Products from "../components/Products/ProductBody"
 
 function Home() {
   return (

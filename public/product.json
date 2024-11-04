@@ -3,7 +3,7 @@
     "product_id": "P001",
     "product_title": "iPhone 14 Pro",
     "product_image": "https://i.ibb.co.com/L9ZXR4M/P001.jpg",
-    "category": "Mobile Phones",
+    "category": "Mobile",
     "price": 1199.99,
     "description": "The latest iPhone with A16 Bionic chip, triple camera system, and 6.1-inch Super Retina XDR display.",
     "specifications": [
@@ -19,7 +19,7 @@
     "product_id": "P002",
     "product_title": "Samsung Galaxy S23",
     "product_image": "https://i.ibb.co.com/84zcwND/P002.png",
-    "category": "Mobile Phones",
+    "category": "Mobile",
     "price": 999.99,
     "description": "Android smartphone with Snapdragon 8 Gen 2 processor, triple camera system, and 120Hz display.",
     "specifications": [
@@ -50,7 +50,7 @@
     "product_id": "P004",
     "product_title": "OnePlus 11",
     "product_image": "https://i.ibb.co.com/B3dpVgB/P004.jpg",
-    "category": "Mobile Phones",
+    "category": "Mobile",
     "price": 749.99,
     "description": "High-performance Android phone with Snapdragon 8 Gen 2 and Hasselblad-enhanced camera.",
     "specifications": [
@@ -82,7 +82,7 @@
     "product_id": "P006",
     "product_title": "Xiaomi 12T Pro",
     "product_image": "https://i.ibb.co.com/YkY50m4/P006.png",
-    "category": "Mobile Phones",
+    "category": "Mobile",
     "price": 649.99,
     "description": "Xiaomi's flagship with 200MP camera, Snapdragon 8+ Gen 1, and fast charging.",
     "specifications": [
@@ -113,7 +113,7 @@
     "product_id": "P008",
     "product_title": "Asus ROG Phone 6",
     "product_image": "https://i.ibb.co.com/x8R2Rrp/P008.png",
-    "category": "Mobile Phones",
+    "category": "Mobile",
     "price": 799.99,
     "description": "Gaming-focused phone with Snapdragon 8+ Gen 1, 165Hz display, and air triggers.",
     "specifications": [
@@ -129,7 +129,7 @@
     "product_id": "P009",
     "product_title": "Nokia X50",
     "product_image": "https://i.ibb.co.com/TmpvXd0/P009.webp",
-    "category": "Mobile Phones",
+    "category": "Mobile",
     "price": 599.99,
     "description": "Reliable Nokia smartphone with high-res display and advanced camera technology.",
     "specifications": [
@@ -161,7 +161,7 @@
     "product_id": "P011",
     "product_title": "Google Pixel 7 Pro",
     "product_image": "https://i.ibb.co.com/nz0XmbQ/P011.jpg",
-    "category": "Mobile Phones",
+    "category": "Mobile",
     "price": 899.99,
     "description": "Google's flagship smartphone with Tensor G2 chip, amazing camera features, and adaptive battery.",
     "specifications": [
@@ -239,7 +239,7 @@
     "product_id": "P016",
     "product_title": "Sony Xperia 1 IV",
     "product_image": "https://i.ibb.co.com/BVXWJNL/P016.webp",
-    "category": "Mobile Phones",
+    "category": "Mobile",
     "price": 1049.99,
     "description": "Sony's 4K smartphone with advanced camera tech and real-time eye autofocus.",
     "specifications": [
@@ -331,7 +331,7 @@
     "product_id": "P022",
     "product_title": "Realme GT 2 Pro",
     "product_image": "https://i.ibb.co.com/gydDfc3/P022.jpg",
-    "category": "Mobile Phones",
+    "category": "Mobile",
     "price": 549.99,
     "description": "Flagship-level performance with Snapdragon 8 Gen 1 and 150° ultra-wide camera.",
     "specifications": [
