@@ -1,18 +1,26 @@
 import PropTypes from 'prop-types'
-// import ReactStars from "react-rating-stars-component";
-// import { CiStar } from "react-icons/ci";
+import { useContext } from 'react';
 import { FaRegHeart } from "react-icons/fa6";
+import { CardDataContext, WishDataContext } from '../../layouts/context';
 
 function Details({ product }) {
 
     const { product_image: image, product_title: title, price, availability, description, specifications, rating } = product;
 
-    const handelAddToCart = () => {
-        
+    const [cardData, setCardData] = useContext(CardDataContext);
+    const [wishData, setWishData] = useContext(WishDataContext);
+
+    const handelAddToCart = (product) => {
+        const newCartData = [...cardData, product];
+        setCardData(newCartData)
+        console.log(cardData);
     }
 
-    const handelAddWishlist = () => {
 
+    const handelAddWishlist = (product) => {
+        const newWishData = [...wishData, product];
+        setWishData(newWishData)
+        console.log(wishData);
     }
 
     return (
@@ -34,12 +42,6 @@ function Details({ product }) {
                     </div>
                     <h1 className='text-lg font-semibold'>Rating :</h1>
                     <div className='flex gap-2 items-center'>
-                        {/* <Rating
-                            emptySymbol={<CiStar></CiStar>}
-                            fullSymbol={<FaStar></FaStar>}
-                        /> */}
-                        {/* <ReactStars count={5} size={24}></ReactStars> */}
-                        {/* Daisy UI Rating System; */}
                         <div className="rating">
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             <input
@@ -54,8 +56,8 @@ function Details({ product }) {
                     </div>
                     <span>{rating}</span>
                     <div className='flex gap-5'>
-                        <button onClick={() => handelAddToCart()} className='btn btn-sm bg-main-color text-white rounded-full px-4'> Add To Card  </button>
-                        <button onClick={() => handelAddWishlist()} className='hover:bg-main-color hover:text-white text-main-color border rounded-full px-2 duration-500 hover:outline'> <FaRegHeart /> </button>
+                        <button onClick={() => handelAddToCart(product)} className='btn btn-sm bg-main-color text-white rounded-full px-4'> Add To Card  </button>
+                        <button onClick={() => handelAddWishlist(product)} className='hover:bg-main-color hover:text-white text-main-color border rounded-full px-2 duration-500 hover:outline'> <FaRegHeart /> </button>
                     </div>
                 </div>
             </div>

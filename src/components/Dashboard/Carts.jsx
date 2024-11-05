@@ -1,8 +1,12 @@
 import { FaSortAmountDown } from "react-icons/fa"
 import Cart from "./Cart"
-import { NavLink } from "react-router-dom"
+import { useContext } from "react";
+import { WishDataContext } from "../../layouts/context";
 
 function Carts() {
+
+    const [wishData] = useContext(WishDataContext);
+
     return (
         <div>
             <div className="my-12 flex justify-between text-2xl font-semibold">
@@ -13,11 +17,10 @@ function Carts() {
                     <button className="btn text-lg rounded-full outline outline-2 bg-main-color outline-main-color text-white hover:text-black">Purchase</button>
                 </div>
             </div>
-            <div className="w-full flex flex-col gap-6 mt-12">
-                <Cart></Cart>
-                <Cart></Cart>
-                <Cart></Cart>
-                <Cart></Cart>
+            <div className="w-full flex flex-col gap-8 mt-12">
+                {
+                    wishData.map((product) => <Cart cart={true} key={product.product_id} product={product}></Cart>)
+                }
             </div>
         </div>
     )

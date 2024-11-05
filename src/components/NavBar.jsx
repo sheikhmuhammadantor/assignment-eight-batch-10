@@ -1,9 +1,13 @@
 import { Link, NavLink, useLocation } from "react-router-dom"
 import { FaBarsStaggered, FaOpencart } from "react-icons/fa6";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CiHeart } from "react-icons/ci";
+import { CardDataContext, WishDataContext } from "../layouts/context";
 
 function NavBar() {
+
+    const [wishData] = useContext(WishDataContext);
+    const [cardData] = useContext(CardDataContext);
 
     const location = useLocation()
     const [navStyle, setNavStyle] = useState(true);
@@ -55,8 +59,8 @@ function NavBar() {
                 </ul>
             </div>
             <div className="navbar-end gap-3 hidden sm:flex">
-                <Link className={`btn rounded-full border-gray-400 ${navStyle ? "hover:bg-white hover:text-black" : "hover:bg-main-color hover:text-white border"}`}><FaOpencart></FaOpencart></Link>
-                <Link className={`btn rounded-full border-gray-400 ${navStyle ? "hover:bg-white hover:text-black" : "hover:bg-main-color hover:text-white border"}`}><CiHeart></CiHeart></Link>
+                <Link className={`btn rounded-full border-gray-400 ${navStyle ? "hover:bg-white hover:text-black" : "hover:bg-main-color hover:text-white border"}`}><span className="absolute">{cardData.length}</span><FaOpencart></FaOpencart></Link>
+                <Link className={`btn rounded-full border-gray-400 ${navStyle ? "hover:bg-white hover:text-black" : "hover:bg-main-color hover:text-white border"}`}><span className="absolute">{wishData.length}</span><CiHeart></CiHeart></Link>
             </div>
         </div>
     )
