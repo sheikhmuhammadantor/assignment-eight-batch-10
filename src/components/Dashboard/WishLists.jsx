@@ -4,7 +4,13 @@ import { WishDataContext } from "../../layouts/context"
 
 function WishLists() {
 
-  const [wishData] = useContext(WishDataContext);
+  const [wishData, setWishData] = useContext(WishDataContext);
+
+
+  const handleDeleteFromWishlist = (id) => {
+    const newWishData = wishData.filter((product) => product.product_id !== id);
+    setWishData(newWishData);
+}
 
   return (
     <div>
@@ -13,7 +19,7 @@ function WishLists() {
       </div>
       <div className="w-full flex flex-col gap-8 mt-12">
         {
-          wishData.map((product) => <Cart wish={true} key={product.product_id} product={product}></Cart>)
+          wishData.map((product) => <Cart wish={true} key={product.product_id} product={product} handelRemove={handleDeleteFromWishlist}></Cart>)
         }
       </div>
     </div>

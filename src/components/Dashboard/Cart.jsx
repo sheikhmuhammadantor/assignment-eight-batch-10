@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
 import { MdDeleteForever } from 'react-icons/md';
 
-function Cart({ wish, product }) {
+function Cart({ wish, product, handelRemove: handleDeleteFromCard }) {
 
     const { product_image: image, product_title: title, description, price } = product;
+
 
 
     return (
@@ -20,7 +21,7 @@ function Cart({ wish, product }) {
                         wish ? <button className="btn btn-sm rounded-full bg-main-color text-white hover:text-black">Add To Card</button> : ""
                     }
                 </div>
-                <button onClick={() => handleDeletFromCard()} className='mr-12 text-4xl text-red-600'><MdDeleteForever /></button>
+                <button onClick={() => handleDeleteFromCard(product)} className='mr-12 text-4xl text-red-600'><MdDeleteForever /></button>
             </div>
         </div>
     )
@@ -29,6 +30,7 @@ function Cart({ wish, product }) {
 Cart.propTypes = {
     product: PropTypes.object.isRequired,
     wish: PropTypes.bool,
+    handelRemove: PropTypes.func,
 }
 
 export default Cart

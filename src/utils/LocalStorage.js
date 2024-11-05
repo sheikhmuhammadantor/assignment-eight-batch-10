@@ -1,0 +1,7 @@
+const getDataFromLocalStorage = () => {
+
+}
+
+const addDataToLocalStorage = () => {
+    
+}

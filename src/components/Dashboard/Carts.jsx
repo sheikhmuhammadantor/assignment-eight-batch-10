@@ -1,20 +1,17 @@
 import { FaSortAmountDown } from "react-icons/fa"
 import Cart from "./Cart"
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { CardDataContext } from "../../layouts/context";
 
 function Carts() {
 
-    const [cardData] = useContext(CardDataContext);
+    const [cardData, setCardData] = useContext(CardDataContext);
     const [totalCost, setTotalCost] = useState(0);
 
-    useEffect(() => {
-        cardData.forEach(product => {
-            setTotalCost(totalCost + product.price)
-            console.log(product, product.price, totalCost);
-        });
-    }, [cardData]);
-
+    const handleDeleteFromCard = (deleteProduct) => {
+        const newCardData = cardData.filter((product) => product.product_id !== deleteProduct.product_id);
+        setCardData(newCardData);
+    }
 
     return (
         <div>
@@ -28,7 +25,7 @@ function Carts() {
             </div>
             <div className="w-full flex flex-col gap-8 mt-12">
                 {
-                    cardData.map((product) => <Cart wish={false} key={product.product_id} product={product}></Cart>)
+                    cardData.map((product) => <Cart wish={false} key={product.product_id} product={product} handelRemove={handleDeleteFromCard}></Cart>)
                 }
             </div>
         </div>
