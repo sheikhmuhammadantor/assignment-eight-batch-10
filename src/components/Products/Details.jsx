@@ -25,27 +25,26 @@ function Details({ product }) {
                         }
                     </div>
                     <h1 className='text-lg font-semibold'>Rating :</h1>
-                    <p className='flex gap-2 items-center'>
+                    <div className='flex gap-2 items-center'>
                         {/* <Rating
                             emptySymbol={<CiStar></CiStar>}
                             fullSymbol={<FaStar></FaStar>}
                         /> */}
                         {/* <ReactStars count={5} size={24}></ReactStars> */}
-                        <div>
-                            <div className="rating">
-                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                                <input
-                                    type="radio"
-                                    name="rating-2"
-                                    className="mask mask-star-2 bg-orange-400"
-                                    defaultChecked />
-                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                            </div>
+                        {/* Daisy UI Rating System; */}
+                        <div className="rating">
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            <input
+                                type="radio"
+                                name="rating-2"
+                                className="mask mask-star-2 bg-orange-400"
+                                defaultChecked />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                         </div>
-                        <span>{rating}</span>
-                    </p>
+                    </div>
+                    <span>{rating}</span>
                     <div className='flex gap-5'>
                         <button className='btn btn-sm bg-main-color text-white rounded-full px-4'> Add To Card  </button>
                         <button className='hover:bg-main-color hover:text-white text-main-color border rounded-full px-2 duration-500 hover:outline'> <FaRegHeart /> </button>

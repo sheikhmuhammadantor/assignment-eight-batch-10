@@ -1,20 +1,20 @@
 import { useParams } from "react-router-dom"
 import Details from "../components/Products/Details"
 import { useContext, useEffect, useState } from "react";
-import { ProductDataContext } from "../layouts/MainLayout";
+import { ProductDataContext } from "../layouts/context";
 import Heading from "../components/Heading";
 
 function ProductDetails() {
 
   const [product, setProduct] = useState({});
   const { id } = useParams()
-  const data = useContext(ProductDataContext)
+  const productData = useContext(ProductDataContext)
 
   useEffect(() => {
-    if (!data) return;
-    const obj = data.find((product) => product.product_id === id)
+    if (!productData) return;
+    const obj = productData.find((product) => product.product_id === id)
     setProduct(obj || {});
-  }, [data, id]);
+  }, [productData, id]);
 
   return (
     <div>
