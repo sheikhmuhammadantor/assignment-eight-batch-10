@@ -1,16 +1,30 @@
 import { FaSortAmountDown } from "react-icons/fa"
 import Cart from "./Cart"
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CardDataContext } from "../../layouts/context";
+// import { addDataToLocalStorage, getDataFromLocalStorage, updateLocalStorData } from "../../utils/LocalStorage";
 
 function Carts() {
 
     const [cardData, setCardData] = useContext(CardDataContext);
     const [totalCost, setTotalCost] = useState(0);
 
+    useEffect(() => {
+        const dataFromStore = localStorage.getItem("cost");
+        const cost = JSON.parse(dataFromStore);
+        setTotalCost(cost);
+    }, [cardData]);
+
     const handleDeleteFromCard = (deleteProduct) => {
         const newCardData = cardData.filter((product) => product.product_id !== deleteProduct.product_id);
         setCardData(newCardData);
+
+        const dataFromStore = localStorage.getItem("cost");
+        const data = JSON.parse(dataFromStore);
+        const costTotal = data - deleteProduct.price;
+        setTotalCost(costTotal);
+        const costString = JSON.stringify(parseFloat(costTotal.toFixed(2)));
+        localStorage.setItem("cost", costString);
     }
 
     return (

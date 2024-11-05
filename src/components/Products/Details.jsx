@@ -2,6 +2,8 @@ import PropTypes from 'prop-types'
 import { useContext } from 'react';
 import { FaRegHeart } from "react-icons/fa6";
 import { CardDataContext, WishDataContext } from '../../layouts/context';
+import { toast } from 'react-toastify';
+
 
 function Details({ product }) {
 
@@ -10,16 +12,50 @@ function Details({ product }) {
     const [cardData, setCardData] = useContext(CardDataContext);
     const [wishData, setWishData] = useContext(WishDataContext);
 
+
     const handelAddToCart = (product) => {
+        const isExist = cardData.find(data => data.product_id === product.product_id)
+        if (isExist) {
+            return toast.error("Product Already Exist !!", {
+                position: "top-center",
+                autoClose: 1000,
+                draggable: true,
+            });
+        }
         const newCartData = [...cardData, product];
         setCardData(newCartData)
+
+        const dataFromStore = localStorage.getItem("cost");
+        const data = JSON.parse(dataFromStore);
+        const totalCost = data + product.price;
+        const costString = JSON.stringify(parseFloat(totalCost.toFixed(2)));
+        localStorage.setItem("cost", costString);
+
+        return toast.success("Product Add To Cart  !!", {
+            position: "top-center",
+            autoClose: 1000,
+            draggable: true,
+        });
     }
 
-
     const handelAddWishlist = (product) => {
+        const isExist = wishData.find(data => data.product_id === product.product_id)
+        if (isExist) {
+            return toast.error("Product Already Exist !!", {
+                position: "top-center",
+                autoClose: 1000,
+                draggable: true,
+            });
+        }
+
         const newWishData = [...wishData, product];
         setWishData(newWishData)
-        console.log(wishData);
+
+        return toast.success("Product Add To Wishlist  !!", {
+            position: "top-center",
+            autoClose: 1000,
+            draggable: true,
+        })
     }
 
     return (
@@ -69,5 +105,3 @@ Details.propTypes = {
 }
 
 export default Details
-
-
