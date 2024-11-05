@@ -7,6 +7,14 @@ function Details({ product }) {
 
     const { product_image: image, product_title: title, price, availability, description, specifications, rating } = product;
 
+    const handelAddToCart = () => {
+        
+    }
+
+    const handelAddWishlist = () => {
+
+    }
+
     return (
         <div className="border-2 rounded-2xl p-3 bg-white absolute lg:-bottom-80 -bottom-[720px] md:-bottom-96 left-1/2 transform -translate-x-1/2">
             <div className='flex flex-col gap-y-6 md:flex-row items-center lg:w-[850px] md:w-[630px] w-[70vw]'>
@@ -46,8 +54,8 @@ function Details({ product }) {
                     </div>
                     <span>{rating}</span>
                     <div className='flex gap-5'>
-                        <button className='btn btn-sm bg-main-color text-white rounded-full px-4'> Add To Card  </button>
-                        <button className='hover:bg-main-color hover:text-white text-main-color border rounded-full px-2 duration-500 hover:outline'> <FaRegHeart /> </button>
+                        <button onClick={() => handelAddToCart()} className='btn btn-sm bg-main-color text-white rounded-full px-4'> Add To Card  </button>
+                        <button onClick={() => handelAddWishlist()} className='hover:bg-main-color hover:text-white text-main-color border rounded-full px-2 duration-500 hover:outline'> <FaRegHeart /> </button>
                     </div>
                 </div>
             </div>
