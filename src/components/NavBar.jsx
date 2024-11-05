@@ -16,10 +16,10 @@ function NavBar() {
         }
         setLinks(
             <>
-                <NavLink to="/" className={({ isActive }) => `${basicStyle} ${navStyle ? "text-black" : "text-white"} ${isActive ? "border-b-2" : " "}`}>Home</NavLink>
-                <NavLink to="/products" className={({ isActive }) => `${basicStyle} ${navStyle ? "text-black" : "text-white"} ${isActive ? "border-b-2" : " "}`}>Products</NavLink>
-                <NavLink to="/dashboard" className={({ isActive }) => `${basicStyle} ${navStyle ? "text-black" : "text-white"} ${isActive ? "border-b-2" : " "}`}>Dashboard</NavLink>
-                <NavLink to="/statistics" className={({ isActive }) => `${basicStyle} ${navStyle ? "text-black" : "text-white"} ${isActive ? "border-b-2" : " "}`}>Statistics</NavLink>
+                <NavLink to="/" className={({ isActive }) => `${basicStyle} ${navStyle ? "text-black border-black" : "text-white"} ${isActive ? "border-b-2" : " "}`}>Home</NavLink>
+                <NavLink to="/products" className={({ isActive }) => `${basicStyle} ${navStyle ? "text-black border-black" : "text-white"} ${isActive ? "border-b-2" : " "}`}>Products</NavLink>
+                <NavLink to="/dashboard" className={({ isActive }) => `${basicStyle} ${navStyle ? "text-black border-black" : "text-white"} ${isActive ? "border-b-2" : " "}`}>Dashboard</NavLink>
+                <NavLink to="/statistics" className={({ isActive }) => `${basicStyle} ${navStyle ? "text-black border-black" : "text-white"} ${isActive ? "border-b-2" : " "}`}>Statistics</NavLink>
             </>
         )
     }, [basicStyle, navStyle, location]);

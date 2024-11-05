@@ -1,9 +1,20 @@
+import { NavLink, Outlet } from "react-router-dom"
+import Heading from "../components/Heading"
+
+
 function Dashboard() {
   return (
-    <div>
-      <h1 className='text-4xl text-center my-12 p-5 bg-green-500'>DashBoard</h1>
-    </div>
-  )
+    <section>
+        <div className="bg-main-color rounded-b-2xl text-center py-8">
+            <Heading heading="Dashboard" paragraph="Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"></Heading>
+            <div className="flex gap-5 justify-center">
+            <NavLink to="/dashboard" className="btn text-main-color text-lg rounded-full">Shop Now</NavLink>
+            <NavLink to="/dashboard/wishlist" className="btn text-main-color text-lg rounded-full">Shop Now</NavLink>
+            </div>
+        </div>
+        <Outlet></Outlet>
+    </section>
+)
 }
 
 export default Dashboard
