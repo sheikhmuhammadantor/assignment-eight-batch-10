@@ -33,7 +33,7 @@ function NavBar() {
         setLinks(
             <>
                 <NavLink to="/" className={({ isActive }) => `${basicStyle} ${navStyle ? "text-black border-black" : "text-white"} ${isActive ? "border-b-2" : " "}`}>Home</NavLink>
-                <NavLink to="/products" className={({ isActive }) => `${basicStyle} ${navStyle ? "text-black border-black" : "text-white"} ${isActive ? "border-b-2" : " "}`}>Products</NavLink>
+                <NavLink to="/popular" className={({ isActive }) => `${basicStyle} ${navStyle ? "text-black border-black" : "text-white"} ${isActive ? "border-b-2" : " "}`}>Most Popular</NavLink>
                 <NavLink to="/dashboard" className={({ isActive }) => `${basicStyle} ${navStyle ? "text-black border-black" : "text-white"} ${isActive ? "border-b-2" : " "}`}>Dashboard</NavLink>
                 <NavLink to="/statistics" className={({ isActive }) => `${basicStyle} ${navStyle ? "text-black border-black" : "text-white"} ${isActive ? "border-b-2" : " "}`}>Statistics</NavLink>
             </>
@@ -59,8 +59,18 @@ function NavBar() {
                 </ul>
             </div>
             <div className="navbar-end gap-3 hidden sm:flex">
-                <Link className={`btn rounded-full border-gray-400 ${navStyle ? "hover:bg-white hover:text-black" : "hover:bg-main-color hover:text-white border"}`}><span className="absolute">{cardData.length}</span><FaOpencart></FaOpencart></Link>
-                <Link className={`btn rounded-full border-gray-400 ${navStyle ? "hover:bg-white hover:text-black" : "hover:bg-main-color hover:text-white border"}`}><span className="absolute">{wishData.length}</span><CiHeart></CiHeart></Link>
+                <button className="relative">
+                    <Link className={`btn rounded-full border-gray-400 ${navStyle ? "hover:bg-white hover:text-black" : "hover:bg-main-color hover:text-white border"}`}>
+                        <span className="absolute -top-2 -right-2 bg-white text-main-color border rounded-full p-1 px-2">{cardData.length}</span>
+                        <FaOpencart></FaOpencart>
+                    </Link>
+                </button>
+                <button className="relative">
+                    <Link className={`btn rounded-full border-gray-400 ${navStyle ? "hover:bg-white hover:text-black" : "hover:bg-main-color hover:text-white border relative"}`}>
+                        <span className="absolute -top-2 -right-2 bg-white text-main-color border rounded-full p-1 px-2">{wishData.length}</span>
+                        <CiHeart></CiHeart>
+                    </Link>
+                </button>
             </div>
         </div>
     )

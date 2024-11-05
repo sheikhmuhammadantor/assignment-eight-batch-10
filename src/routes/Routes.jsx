@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, MainLayout, Statistics, Dashboard, ErrorPage, AllProduct, ProductDetails, Products, FilterProduct, Carts, WishLists } from '../components/components'
+import { Home, MainLayout, Statistics, Dashboard, ErrorPage, ProductDetails, Products, FilterProduct, Carts, WishLists } from '../components/components'
+import MostPopular from "../pages/MostPopular";
 
 
 const routes = createBrowserRouter([
@@ -31,8 +32,8 @@ const routes = createBrowserRouter([
                 ]
             },
             {
-                path: '/products',
-                element: <AllProduct></AllProduct>,
+                path: '/popular',
+                element: <MostPopular></MostPopular>,
             },
             {
                 path: '/dashboard',

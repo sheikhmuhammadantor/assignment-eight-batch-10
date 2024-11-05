@@ -6,7 +6,8 @@ function Products() {
     const [product, setProduct] = useState([]);
     const productData = useContext(ProductDataContext)
     useEffect(() => {
-        setProduct(productData)
+        const newProduct = productData.slice(1, 11)
+        setProduct(newProduct)
     }, [productData]);
 
     return (
