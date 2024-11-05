@@ -1,18 +1,14 @@
 import PropTypes from 'prop-types'
-import React from 'react';
-import Rating from 'react-rating';
-import { CiStar } from "react-icons/ci";
-import { FaRegHeart, FaStar } from "react-icons/fa6";
-// import imate from '/banner.jpg'
+// import ReactStars from "react-rating-stars-component";
+// import { CiStar } from "react-icons/ci";
+import { FaRegHeart } from "react-icons/fa6";
 
 function Details({ product }) {
 
     const { product_image: image, product_title: title, price, availability, description, specifications, rating } = product;
-    React.createElement(Rating);
 
     return (
         <div className="border-2 rounded-2xl p-3 bg-white absolute lg:-bottom-80 -bottom-[720px] md:-bottom-96 left-1/2 transform -translate-x-1/2">
-            {/* <img src={imate} alt="" /> */}
             <div className='flex flex-col gap-y-6 md:flex-row items-center lg:w-[850px] md:w-[630px] w-[70vw]'>
                 <div className='max-w-md'>
                     <img src={image} alt={title} className='rounded-xl' />
@@ -30,11 +26,25 @@ function Details({ product }) {
                     </div>
                     <h1 className='text-lg font-semibold'>Rating :</h1>
                     <p className='flex gap-2 items-center'>
-                        <Rating
+                        {/* <Rating
                             emptySymbol={<CiStar></CiStar>}
                             fullSymbol={<FaStar></FaStar>}
-                        />
-                        {rating}
+                        /> */}
+                        {/* <ReactStars count={5} size={24}></ReactStars> */}
+                        <div>
+                            <div className="rating">
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input
+                                    type="radio"
+                                    name="rating-2"
+                                    className="mask mask-star-2 bg-orange-400"
+                                    defaultChecked />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            </div>
+                        </div>
+                        <span>{rating}</span>
                     </p>
                     <div className='flex gap-5'>
                         <button className='btn btn-sm bg-main-color text-white rounded-full px-4'> Add To Card  </button>
