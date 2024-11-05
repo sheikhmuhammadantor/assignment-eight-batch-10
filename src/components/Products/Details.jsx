@@ -13,7 +13,6 @@ function Details({ product }) {
     const handelAddToCart = (product) => {
         const newCartData = [...cardData, product];
         setCardData(newCartData)
-        console.log(cardData);
     }
 
 
