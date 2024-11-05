@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
 import React from 'react';
 import Rating from 'react-rating';
-import { CiHeart, CiStar } from "react-icons/ci";
+import { CiStar } from "react-icons/ci";
 import { FaRegHeart, FaStar } from "react-icons/fa6";
+// import imate from '/banner.jpg'
 
 function Details({ product }) {
 
@@ -11,6 +12,7 @@ function Details({ product }) {
 
     return (
         <div className="border-2 rounded-2xl p-3 bg-white absolute lg:-bottom-80 -bottom-[720px] md:-bottom-96 left-1/2 transform -translate-x-1/2">
+            {/* <img src={imate} alt="" /> */}
             <div className='flex flex-col gap-y-6 md:flex-row items-center lg:w-[850px] md:w-[630px] w-[70vw]'>
                 <div className='max-w-md'>
                     <img src={image} alt={title} className='rounded-xl' />
