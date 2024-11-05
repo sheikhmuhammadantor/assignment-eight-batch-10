@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Category from "./Category";
+import { NavLink } from "react-router-dom";
 
 function SideBar() {
 
@@ -10,11 +11,15 @@ function SideBar() {
             .then(data => setCategories(data))
     }, []);
 
+    const basicStyle = `btn text-base text-black rounded-full`
+
     return (
         <div className="flex flex-col gap-3 border p-4 rounded-2xl shadow-xl">
             {
+                <NavLink to="/all" className={({ isActive }) => `${basicStyle} ${isActive ? "text-white bg-main-color" : " "}`}>All</NavLink>
+            }
+            {
                 categories.map((category, idx) => <Category key={idx} category={category}></Category>)
-                // category.map((cat) => <NavLink to={`/${cat.category_name}`} className={({ isActive }) => `${basicStyle} ${isActive ? "text-white bg-main-color" : " "}`} key={cat.category_name}>{cat.category_name}</NavLink>)
             }
         </div>
     )
