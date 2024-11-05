@@ -60,13 +60,13 @@ function NavBar() {
             </div>
             <div className="navbar-end gap-3 hidden sm:flex">
                 <button className="relative">
-                    <Link className={`btn rounded-full border-gray-400 ${navStyle ? "hover:bg-white hover:text-black" : "hover:bg-main-color hover:text-white border"}`}>
+                    <Link to='/dashboard' className={`btn rounded-full border-gray-400 ${navStyle ? "hover:bg-white hover:text-black" : "hover:bg-main-color hover:text-white border"}`}>
                         <span className="absolute -top-2 -right-2 bg-white text-main-color border rounded-full p-1 px-2">{cardData.length}</span>
                         <FaOpencart></FaOpencart>
                     </Link>
                 </button>
                 <button className="relative">
-                    <Link className={`btn rounded-full border-gray-400 ${navStyle ? "hover:bg-white hover:text-black" : "hover:bg-main-color hover:text-white border relative"}`}>
+                    <Link to='/dashboard/wishlist' className={`btn rounded-full border-gray-400 ${navStyle ? "hover:bg-white hover:text-black" : "hover:bg-main-color hover:text-white border relative"}`}>
                         <span className="absolute -top-2 -right-2 bg-white text-main-color border rounded-full p-1 px-2">{wishData.length}</span>
                         <CiHeart></CiHeart>
                     </Link>
