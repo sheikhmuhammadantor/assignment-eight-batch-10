@@ -16,7 +16,7 @@ function SideBar() {
     return (
         <div className="flex flex-col gap-3 border p-4 rounded-2xl shadow-xl">
             {
-                <NavLink to="/all" className={({ isActive }) => `${basicStyle} ${isActive ? "text-white bg-main-color" : " "}`}>All</NavLink>
+                <NavLink to="/home/all" className={({ isActive }) => `${basicStyle} ${isActive ? "text-white bg-main-color" : " "}`}>All</NavLink>
             }
             {
                 categories.map((category, idx) => <Category key={idx} category={category}></Category>)

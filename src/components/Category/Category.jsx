@@ -7,7 +7,7 @@ function Category({ category }) {
   const { category_name: name } = category;
 
   return (
-    <NavLink to={`/${name}`} className={({ isActive }) => `${basicStyle} ${isActive ? "text-white bg-main-color" : " "}`}>{name}</NavLink>
+    <NavLink to={`/home/${name}`} className={({ isActive }) => `${basicStyle} ${isActive ? "text-white bg-main-color" : " "}`}>{name}</NavLink>
   )
 }
 

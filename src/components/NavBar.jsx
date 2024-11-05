@@ -12,8 +12,20 @@ function NavBar() {
 
     useEffect(() => {
         if (location) {
-            location?.pathname === "/" ? setNavStyle(false) : setNavStyle(true);
+            const pathname = location.pathname;
+            const homePath = pathname.slice(0, 5);
+
+            if (homePath === '/') {
+                setNavStyle(false)
+            } else if (homePath === '/home') {
+                setNavStyle(false)
+            } else {
+                setNavStyle(true)
+            }
         }
+    }, [location]);
+
+    useEffect(() => {
         setLinks(
             <>
                 <NavLink to="/" className={({ isActive }) => `${basicStyle} ${navStyle ? "text-black border-black" : "text-white"} ${isActive ? "border-b-2" : " "}`}>Home</NavLink>
@@ -22,7 +34,7 @@ function NavBar() {
                 <NavLink to="/statistics" className={({ isActive }) => `${basicStyle} ${navStyle ? "text-black border-black" : "text-white"} ${isActive ? "border-b-2" : " "}`}>Statistics</NavLink>
             </>
         )
-    }, [basicStyle, navStyle, location]);
+    }, [navStyle, basicStyle])
 
     return (
         <div className={`navbar rounded-t-2xl py-3 px-12 ${navStyle ? "bg-white" : "bg-main-color"}`}>

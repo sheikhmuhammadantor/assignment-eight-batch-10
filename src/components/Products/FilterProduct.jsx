@@ -9,8 +9,6 @@ function FilterProduct() {
     const [product, setProduct] = useState([]);
     const productData = useContext(ProductDataContext)
     const { categoryName } = useParams()
-    console.log(categoryName)
-    console.log(productData)
 
     useEffect(() => {
         const newData = productData.filter((product) => product.category === categoryName)
