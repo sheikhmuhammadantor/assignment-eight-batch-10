@@ -15,7 +15,7 @@ function Product({ product }) {
           <h2 className="card-title">{product_title}</h2>
           <p className="">Price: ${price}</p>
           <div className="card-actions">
-            <NavLink to={`details/${product_id}`} className="btn btn-primary">View Details</NavLink>
+            <NavLink to={`/details/${product_id}`} className="btn btn-primary">View Details</NavLink>
           </div>
         </div>
       </div>
