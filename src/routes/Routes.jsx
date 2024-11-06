@@ -44,6 +44,10 @@ const routes = createBrowserRouter([
                         element: <Carts></Carts>
                     },
                     {
+                        path: "/dashboard/carts",
+                        element: <Carts></Carts>
+                    },
+                    {
                         path: "wishlists",
                         element: <WishLists></WishLists>
                     }
