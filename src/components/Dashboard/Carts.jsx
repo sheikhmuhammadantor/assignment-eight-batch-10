@@ -47,11 +47,12 @@ function Carts() {
     }
 
     const handelModalClose = () => {
+        setTotalCost(0);
         navigate("/")
     }
 
     return (
-        <div>
+        <div className="px-5">
             <div className="my-12 flex justify-between text-2xl font-semibold items-center">
                 <h2>Cart</h2>
                 <div className="flex items-center gap-4">

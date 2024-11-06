@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { ProductDataContext } from "../layouts/context"
 import Product from "../components/Products/Product";
+import { Helmet } from "react-helmet";
 
 function MostPopular() {
 
@@ -15,6 +16,9 @@ function MostPopular() {
 
   return (
     <div>
+      <Helmet>
+        <title>Most Popular | GadgetHeaven✨</title>
+      </Helmet>
       <h1 className="text-4xl font-semibold text-center my-12">Our Most Popular Product - By Rating</h1>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-8'>
         {

@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet"
 import { Link } from "react-router-dom"
 
 function ErrorPage() {
     return (
         <section>
-            <main className="h-96 w-full flex flex-col justify-center items-center bg-[#1A2238]">
+            <Helmet>
+                <title>Error Page | GadgetHeaven✨</title>
+            </Helmet>
+            <main className="h-[97vh] w-full flex flex-col justify-center items-center bg-[#1A2238] overflow-x-hidden">
                 <h1 className="text-9xl font-extrabold text-white tracking-widest">404</h1>
                 <div className="bg-[#FF6A3D] px-2 text-sm rounded rotate-12 absolute">
                     Page Not Found
