@@ -48,8 +48,6 @@ function Carts() {
 
     const handelModalClose = () => {
         navigate("/")
-        // if(cardData.length === 0) 
-        // setBtnDisable(true);
     }
 
     return (
@@ -58,8 +56,8 @@ function Carts() {
                 <h2>Cart</h2>
                 <div className="flex items-center gap-4">
                     <h2 className="text-right">Total cost: {totalCost.toFixed(2)}</h2>
-                    <button onClick={() => handleSortByPrice()} className="btn text-lg rounded-full outline outline-2 outline-main-color text-main-color bg-transparent">Sort By Price <FaSortAmountDown /></button>
-                    <button onClick={() => handelPurchase()} className="btn text-lg rounded-full outline outline-2 bg-main-color outline-main-color text-white hover:text-black" disabled={btnDisable}>Purchase</button>
+                    <button onClick={() => handleSortByPrice()} className="btn text-lg rounded-full outline outline-2 outline-main-color text-main-color bg-transparent disabled:text-main-color disabled:opacity-60" disabled={btnDisable}>Sort By Price <FaSortAmountDown /></button>
+                    <button onClick={() => handelPurchase()} className="btn text-lg rounded-full outline outline-2 bg-main-color outline-main-color text-white hover:text-black disabled:bg-main-color disabled:text-white disabled:opacity-60 disabled:outline-offset-2" disabled={btnDisable}>Purchase</button>
                 </div>
             </div>
             <div className="w-full flex flex-col gap-8 mt-12">
