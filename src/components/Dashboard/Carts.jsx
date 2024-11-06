@@ -1,13 +1,18 @@
 import { FaSortAmountDown } from "react-icons/fa"
 import Cart from "./Cart"
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { CardDataContext } from "../../layouts/context";
+import successImage from '/assets/success.png'
+import { useNavigate } from "react-router-dom";
 
 
 function Carts() {
 
     const [cardData, setCardData] = useContext(CardDataContext);
     const [totalCost, setTotalCost] = useState(0);
+    const [btnDisable, setBtnDisable] = useState(false);
+    const purchaseModal = useRef();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const dataFromStore = localStorage.getItem("cost");
@@ -15,6 +20,7 @@ function Carts() {
         setTotalCost(cost);
         if (!cardData.length) {
             localStorage.setItem('cost', JSON.stringify(0));
+            setBtnDisable(true)
         }
     }, [cardData]);
 
@@ -35,6 +41,17 @@ function Carts() {
         setCardData(newSortCardData);
     }
 
+    const handelPurchase = () => {
+        setCardData([]);
+        purchaseModal.current.showModal();
+    }
+
+    const handelModalClose = () => {
+        navigate("/")
+        // if(cardData.length === 0) 
+        // setBtnDisable(true);
+    }
+
     return (
         <div>
             <div className="my-12 flex justify-between text-2xl font-semibold items-center">
@@ -42,7 +59,7 @@ function Carts() {
                 <div className="flex items-center gap-4">
                     <h2 className="text-right">Total cost: {totalCost.toFixed(2)}</h2>
                     <button onClick={() => handleSortByPrice()} className="btn text-lg rounded-full outline outline-2 outline-main-color text-main-color bg-transparent">Sort By Price <FaSortAmountDown /></button>
-                    <button className="btn text-lg rounded-full outline outline-2 bg-main-color outline-main-color text-white hover:text-black">Purchase</button>
+                    <button onClick={() => handelPurchase()} className="btn text-lg rounded-full outline outline-2 bg-main-color outline-main-color text-white hover:text-black" disabled={btnDisable}>Purchase</button>
                 </div>
             </div>
             <div className="w-full flex flex-col gap-8 mt-12">
@@ -50,6 +67,23 @@ function Carts() {
                     cardData.map((product) => <Cart wish={false} key={product.product_id} product={product} handelRemove={handleDeleteFromCard}></Cart>)
                 }
             </div>
+            {/* Modal Code - */}
+            <dialog id="purchaseModal" ref={purchaseModal} className="modal">
+                <div className="modal-box text-center">
+                    <div className="">
+                        <img className="mx-auto" src={successImage} alt="Success Icon" />
+                        <h3 className="font-semibold text-3xl text-center my-3">Payment Successful</h3>
+                        <div className="divider"></div>
+                        <p className="">Thanks for Purchasing</p>
+                        <p>Total : {totalCost.toFixed(2)}</p>
+                    </div>
+                    <div className="modal-action">
+                        <form method="dialog" className="w-full">
+                            <button onClick={() => handelModalClose()} className="btn px-12">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
         </div>
     )
 }
