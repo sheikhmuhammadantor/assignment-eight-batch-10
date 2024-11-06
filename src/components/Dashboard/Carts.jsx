@@ -13,7 +13,7 @@ function Carts() {
         const dataFromStore = localStorage.getItem("cost");
         const cost = JSON.parse(dataFromStore);
         setTotalCost(cost);
-        if(!cardData.length){
+        if (!cardData.length) {
             localStorage.setItem('cost', JSON.stringify(0));
         }
     }, [cardData]);
@@ -22,14 +22,17 @@ function Carts() {
         const newCardData = cardData.filter((product) => product.product_id !== deleteProduct.product_id);
         setCardData(newCardData);
 
-        // if(cardData.length){
-            const dataFromStore = localStorage.getItem("cost");
-            const data = JSON.parse(dataFromStore);
-            const costTotal = data - deleteProduct.price;
-            setTotalCost(costTotal);
-            const costString = JSON.stringify(parseFloat(costTotal.toFixed(2)));
-            localStorage.setItem("cost", costString);
-        // }
+        const dataFromStore = localStorage.getItem("cost");
+        const data = JSON.parse(dataFromStore);
+        const costTotal = data - deleteProduct.price;
+        setTotalCost(costTotal);
+        const costString = JSON.stringify(parseFloat(costTotal.toFixed(2)));
+        localStorage.setItem("cost", costString);
+    }
+
+    const handleSortByPrice = () => {
+        const newSortCardData = [...cardData].sort((a, b) => b.price - a.price);
+        setCardData(newSortCardData);
     }
 
     return (
@@ -38,7 +41,7 @@ function Carts() {
                 <h2>Cart</h2>
                 <div className="flex items-center gap-4">
                     <h2 className="text-right">Total cost: {totalCost.toFixed(2)}</h2>
-                    <button className="btn text-lg rounded-full outline outline-2 outline-main-color text-main-color bg-transparent">Sort By Price <FaSortAmountDown /></button>
+                    <button onClick={() => handleSortByPrice()} className="btn text-lg rounded-full outline outline-2 outline-main-color text-main-color bg-transparent">Sort By Price <FaSortAmountDown /></button>
                     <button className="btn text-lg rounded-full outline outline-2 bg-main-color outline-main-color text-white hover:text-black">Purchase</button>
                 </div>
             </div>
